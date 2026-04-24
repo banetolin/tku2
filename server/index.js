@@ -9,7 +9,8 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 const PORT = process.env.PORT || 3000;
-const CORE_EXE = process.env.CORE_EXE || path.join(__dirname, "..", "core", "mines_core.exe");
+const coreFileName = process.platform === "win32" ? "mines_core.exe" : "mines_core";
+const CORE_EXE = process.env.CORE_EXE || path.join(__dirname, "..", "core", coreFileName);
 
 const DEFAULT_CONFIG = {
   rows: 10,

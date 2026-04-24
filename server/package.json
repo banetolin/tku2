@@ -4,7 +4,8 @@
   "description": "Two-player minesweeper with C core and Socket.IO",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+	"build": "gcc ../core/mines_core.c -O2 -o ../core/mines_core",
+	"start": "node index.js"
   },
   "dependencies": {
     "express": "^4.19.2",
