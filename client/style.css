@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.join {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input, button {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+}
+
+button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#restartBtn {
+  background: #0f766e;
+}
+
+#restartBtn:disabled {
+  background: #4b5563;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+#status, #scoreboard {
+  margin: 0.75rem 0;
+}
+
+.board {
+  display: grid;
+  gap: 4px;
+  user-select: none;
+}
+
+.cell {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #374151;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f2937;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cell.revealed {
+  background: #374151;
+}
+
+.cell.mine {
+  background: #7f1d1d;
+}
+
+.hint {
+  color: #9ca3af;
+}

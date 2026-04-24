@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>雙人踩地雷 (C Core)</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>雙人踩地雷</h1>
+      <section class="join">
+        <input id="roomId" placeholder="房間代碼 (例如 room1)" />
+        <input id="playerName" placeholder="玩家名稱" />
+        <button id="joinBtn">加入房間</button>
+        <button id="restartBtn" type="button">重新開局</button>
+      </section>
+      <section id="status"></section>
+      <section id="scoreboard"></section>
+      <section id="board" class="board"></section>
+      <p class="hint">左鍵翻格，右鍵插旗。踩雷 -5 分，翻開安全格 +分。</p>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+  </html>
